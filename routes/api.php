@@ -25,7 +25,7 @@ Route::get('/anggota', [AnggotaController::class, 'index']);
 Route::get('/anggota/{id}', [AnggotaController::class, 'show']);
 Route::delete('/anggota/{id}', [AnggotaController::class, 'destroy']);
 Route::post('/anggota', [AnggotaController::class, 'store']);
-Route::post('/anggota/{id}', [AnggotaController::class, 'update']);
+Route::put('/anggota/{id}', [AnggotaController::class, 'update']);
 
 Route::post('/users', [UserController::class, 'store']);
 Route::post('/users/login', [UserController::class, 'login']);

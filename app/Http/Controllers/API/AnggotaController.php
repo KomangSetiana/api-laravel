@@ -100,7 +100,7 @@ class AnggotaController extends Controller
             'name' => 'required',
             'nik' => '',
             'alamat' => '',
-            'image' => 'image',
+            // 'image' => 'nullable',
             'telp' => '',
             'tabungan_id' => ''
         ];
