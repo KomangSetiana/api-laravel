@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('anggotas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('tabungan_id');
             $table->string('name');
             $table->integer('nik')->unique();
             $table->text('alamat');
             $table->string('image');
             $table->integer('telp');
-            $table->foreignId('tabungan_id');
+            // $table->foreignId('tabungan_id');
+            $table->foreign('tabungan_id')->references('id')->on('tabungans');
             $table->timestamps();
         });
     }
